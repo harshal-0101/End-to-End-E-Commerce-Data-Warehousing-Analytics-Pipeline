@@ -14,7 +14,13 @@ from gold import (
     create_order_summary,
     create_monthly_revenue
 )
-
+from warehouse import(
+    load_customer_revenue,
+    load_product_revenue,
+    load_monthly_revenue,
+    load_state_revenue,
+    load_order_summary
+)
 import logging as log
 
 log.basicConfig(
@@ -143,7 +149,6 @@ for raw_path, dataset_name, bronze_path, silver_path in files:
             f"{dataset_name} failed: {e}"
         )
 
-
 orders_df = extract("./data/silver/silver_orders.csv")
 order_items_df = extract("./data/silver/silver_order_items.csv")
 customer_df = extract("./data/silver/silver_customers.csv")
@@ -155,7 +160,7 @@ customer_revenue.to_csv("./data/gold/customer_revenue.csv", index=False)
 log.info("Customer revenue created")
 
 product_revenue = create_product_revenue(product_df, order_items_df)
-product_revenue.to_csv("./data/gold/product_revenue.csv", index=False)  
+product_revenue.to_csv("./data/gold/product_revenue.csv", index=False)
 log.info("Product revenue created")
 
 state_revenue = create_state_revenue(customer_df, orders_df, order_items_df)
@@ -169,5 +174,24 @@ log.info("Order summary created")
 monthly_revenue = create_monthly_revenue(orders_df, order_items_df)
 monthly_revenue.to_csv("./data/gold/monthly_revenue.csv", index=False)  
 log.info("Monthly revenue created")
+        
+        
+        
+log.info("Gold to Database pipeline started")
+
+load_customer_revenue(customer_revenue)
+log.info("customer revenue loaded in database")
+
+load_product_revenue(product_revenue)
+log.info("product revenue loaded in database")
+
+load_monthly_revenue(monthly_revenue)
+log.info("monthly revenue loaded in database")
+
+load_state_revenue(state_revenue)
+log.info("state revenue loaded in database")
+
+load_order_summary(order_summary)
+log.info("order summary loaded in database")
   
 log.info("Pipeline Completed")

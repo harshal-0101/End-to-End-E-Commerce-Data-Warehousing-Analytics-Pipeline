@@ -1,38 +1,44 @@
-2026-06-11 17:43:23,698 - INFO - Pipeline Started
-2026-06-11 17:43:23,829 - INFO - customers loaded - Rows: 99441
-2026-06-11 17:43:24,213 - INFO - customers bronze created
-2026-06-11 17:43:24,222 - INFO - customers validation passed
-2026-06-11 17:43:24,616 - INFO - customers silver created
-2026-06-11 17:43:25,325 - INFO - geolocation loaded - Rows: 1000163
-2026-06-11 17:43:30,394 - INFO - geolocation bronze created
-2026-06-11 17:43:35,096 - INFO - geolocation silver created
-2026-06-11 17:43:35,288 - INFO - order_items loaded - Rows: 112650
-2026-06-11 17:43:35,885 - INFO - order_items bronze created
-2026-06-11 17:43:36,551 - INFO - order_items silver created
-2026-06-11 17:43:36,672 - INFO - payments loaded - Rows: 103886
-2026-06-11 17:43:37,040 - INFO - payments bronze created
-2026-06-11 17:43:37,472 - INFO - payments silver created
-2026-06-11 17:43:37,766 - INFO - reviews loaded - Rows: 99224
-2026-06-11 17:43:38,243 - INFO - reviews bronze created
-2026-06-11 17:43:38,733 - INFO - reviews silver created
-2026-06-11 17:43:39,105 - INFO - orders loaded - Rows: 99441
-2026-06-11 17:43:39,697 - INFO - orders bronze created
-2026-06-11 17:43:39,722 - INFO - orders validation passed
-2026-06-11 17:43:40,627 - INFO - orders silver created
-2026-06-11 17:43:40,671 - INFO - products loaded - Rows: 32951
-2026-06-11 17:43:40,926 - INFO - products bronze created
-2026-06-11 17:43:40,929 - INFO - products validation passed
-2026-06-11 17:43:41,135 - INFO - products silver created
-2026-06-11 17:43:41,140 - INFO - sellers loaded - Rows: 3095
-2026-06-11 17:43:41,154 - INFO - sellers bronze created
-2026-06-11 17:43:41,155 - INFO - sellers validation passed
-2026-06-11 17:43:41,170 - INFO - sellers silver created
-2026-06-11 17:43:41,172 - INFO - category_translation loaded - Rows: 71
-2026-06-11 17:43:41,174 - INFO - category_translation bronze created
-2026-06-11 17:43:41,177 - INFO - category_translation silver created
-2026-06-11 17:43:42,946 - INFO - Customer revenue created
-2026-06-11 17:43:43,116 - INFO - Product revenue created
-2026-06-11 17:43:43,270 - INFO - State revenue created
-2026-06-11 17:43:44,081 - INFO - Order summary created
-2026-06-11 17:43:44,253 - INFO - Monthly revenue created
-2026-06-11 17:43:44,254 - INFO - Pipeline Completed
+2026-06-17 17:27:46,702 - INFO - Pipeline Started
+2026-06-17 17:27:46,851 - INFO - customers loaded - Rows: 99441
+2026-06-17 17:27:47,257 - INFO - customers bronze created
+2026-06-17 17:27:47,266 - INFO - customers validation passed
+2026-06-17 17:27:47,659 - INFO - customers silver created
+2026-06-17 17:27:48,232 - INFO - geolocation loaded - Rows: 1000163
+2026-06-17 17:27:52,782 - INFO - geolocation bronze created
+2026-06-17 17:27:57,417 - INFO - geolocation silver created
+2026-06-17 17:27:57,621 - INFO - order_items loaded - Rows: 112650
+2026-06-17 17:27:58,219 - INFO - order_items bronze created
+2026-06-17 17:27:58,815 - INFO - order_items silver created
+2026-06-17 17:27:58,917 - INFO - payments loaded - Rows: 103886
+2026-06-17 17:27:59,314 - INFO - payments bronze created
+2026-06-17 17:27:59,724 - INFO - payments silver created
+2026-06-17 17:28:00,020 - INFO - reviews loaded - Rows: 99224
+2026-06-17 17:28:00,485 - INFO - reviews bronze created
+2026-06-17 17:28:01,014 - INFO - reviews silver created
+2026-06-17 17:28:01,312 - INFO - orders loaded - Rows: 99441
+2026-06-17 17:28:01,893 - INFO - orders bronze created
+2026-06-17 17:28:01,916 - INFO - orders validation passed
+2026-06-17 17:28:02,790 - INFO - orders silver created
+2026-06-17 17:28:02,831 - INFO - products loaded - Rows: 32951
+2026-06-17 17:28:03,047 - INFO - products bronze created
+2026-06-17 17:28:03,049 - INFO - products validation passed
+2026-06-17 17:28:03,248 - INFO - products silver created
+2026-06-17 17:28:03,255 - INFO - sellers loaded - Rows: 3095
+2026-06-17 17:28:03,273 - INFO - sellers bronze created
+2026-06-17 17:28:03,274 - INFO - sellers validation passed
+2026-06-17 17:28:03,291 - INFO - sellers silver created
+2026-06-17 17:28:03,293 - INFO - category_translation loaded - Rows: 71
+2026-06-17 17:28:03,295 - INFO - category_translation bronze created
+2026-06-17 17:28:03,297 - INFO - category_translation silver created
+2026-06-17 17:28:04,791 - INFO - Customer revenue created
+2026-06-17 17:28:04,999 - INFO - Product revenue created
+2026-06-17 17:28:05,171 - INFO - State revenue created
+2026-06-17 17:28:06,029 - INFO - Order summary created
+2026-06-17 17:28:06,215 - INFO - Monthly revenue created
+2026-06-17 17:28:06,215 - INFO - Gold to Database pipeline started
+2026-06-17 17:28:07,956 - INFO - customer revenue loaded in database
+2026-06-17 17:28:08,554 - INFO - product revenue loaded in database
+2026-06-17 17:28:08,563 - INFO - monthly revenue loaded in database
+2026-06-17 17:28:08,571 - INFO - state revenue loaded in database
+2026-06-17 17:28:13,344 - INFO - order summary loaded in database
+2026-06-17 17:28:13,344 - INFO - Pipeline Completed

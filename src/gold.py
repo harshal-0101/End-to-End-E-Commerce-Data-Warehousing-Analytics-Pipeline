@@ -26,15 +26,31 @@ def create_product_revenue(products_df, order_items_df):
 
 def create_monthly_revenue(orders_df, order_items_df):
 
-    merged_df = pd.merge(orders_df, order_items_df, on="order_id")
+    merged_df = pd.merge(
+        orders_df,
+        order_items_df,
+        on="order_id"
+    )
 
-    merged_df["order_purchase_timestamp"] = pd.to_datetime(merged_df["order_purchase_timestamp"])
+    merged_df["order_purchase_timestamp"] = pd.to_datetime(
+        merged_df["order_purchase_timestamp"]
+    )
 
-    merged_df["month_year"] = merged_df["order_purchase_timestamp"].dt.to_period("M")
+    merged_df["month_year"] = (
+        merged_df["order_purchase_timestamp"]
+        .dt.to_period("M")
+    )
 
-    monthly_revenue = merged_df.groupby("month_year").agg(
-        total_revenue=("price", "sum")
-    ).reset_index()
+    monthly_revenue = (
+        merged_df.groupby("month_year")
+        .agg(total_revenue=("price", "sum"))
+        .reset_index()
+    )
+
+    monthly_revenue["month_year"] = (
+        monthly_revenue["month_year"]
+        .dt.to_timestamp()
+    )
 
     return monthly_revenue
 
